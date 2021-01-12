@@ -218,4 +218,35 @@ let nums2 = [2, 4, 6, 8];
 let myNums = nums2; // myNums reference the same array(nums)
 
 nums2.push('BOO');
-console.log(myNums);
+// console.log(myNums);
+
+// Coding Challenge #2
+
+/*
+Steven is still building his tip calculator: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+* .15 for 15% tip
+* .2 for the 20% tip
+
+1. Create an array to store the bills data. 
+2. Create a variable for each tip using an if/else statement to determine the tip amount. You can also do a one line ternary statement.
+3. Create an array 'tips' containing the tip values for each bill.
+4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
+
+bills = 125, 555 and 44
+
+*/
+
+let bills = [125, 555, 44];
+
+let tip1 = bills[0] >= 50 && bills[0] <= 300 ? bills[0] * 0.15 : bills[0] * 0.2;
+let tip2 = bills[1] >= 50 && bills[1] <= 300 ? bills[1] * 0.15 : bills[1] * 0.2;
+let tip3 = bills[2] >= 50 && bills[2] <= 300 ? bills[2] * 0.15 : bills[2] * 0.2;
+
+const tips = [tip1, tip2, tip3];
+
+const total1 = bills[0] + tips[0];
+
+const totals = [total1, bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(totals);
